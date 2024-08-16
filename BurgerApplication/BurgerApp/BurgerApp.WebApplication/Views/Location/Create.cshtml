@@ -1,0 +1,38 @@
+﻿@model Location
+<partial name="_Notification" />
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-body-emphasis">Create Location</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="LocationName" class="form-label"></label>
+            <input asp-for="LocationName" class="form-control" />
+            <span asp-validation-for="LocationName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address" class="form-label"></label>
+            <input asp-for="Address" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <div class="mb-3">
+                <label asp-for="OpensAt" class="form-label"></label>
+                <input asp-for="OpensAt" class="form-control" type="time" />
+                <span asp-validation-for="OpensAt" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ClosesAt" class="form-label"></label>
+                <input asp-for="ClosesAt" class="form-control" type="time" />
+                <span asp-validation-for="ClosesAt" class="text-danger"></span>
+            </div>
+
+            <div class="text-end mt-4">
+                <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+
+            </div>
+        </div>
+    </div>
+</form>

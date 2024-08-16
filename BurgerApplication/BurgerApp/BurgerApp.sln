@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.DataAccess", "BurgerApp.DataAccess\BurgerApp.DataAccess.csproj", "{1FC7B5EB-7F99-4FB4-9E93-1B2D4E79140F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.Domain", "BurgerApp.Domain\BurgerApp.Domain.csproj", "{31602F1C-B67B-4275-BC19-527831B5564D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.Dtos", "BurgerApp.Dtos\BurgerApp.Dtos.csproj", "{596A2423-C068-4DB7-A78C-A1091A430FB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.Mapper", "BurgerApp.Mapper\BurgerApp.Mapper.csproj", "{EF90C349-2946-4301-A01B-F273B0E452F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.Services", "BurgerApp.Services\BurgerApp.Services.csproj", "{9F7D3D95-80B4-47B4-A8CA-669E6FAD74B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerApp.WebApplication", "BurgerApp.WebApplication\BurgerApp.WebApplication.csproj", "{052FDC5F-0653-490F-A4EB-D4B5B704880F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FC7B5EB-7F99-4FB4-9E93-1B2D4E79140F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC7B5EB-7F99-4FB4-9E93-1B2D4E79140F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC7B5EB-7F99-4FB4-9E93-1B2D4E79140F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC7B5EB-7F99-4FB4-9E93-1B2D4E79140F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31602F1C-B67B-4275-BC19-527831B5564D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31602F1C-B67B-4275-BC19-527831B5564D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31602F1C-B67B-4275-BC19-527831B5564D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31602F1C-B67B-4275-BC19-527831B5564D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596A2423-C068-4DB7-A78C-A1091A430FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596A2423-C068-4DB7-A78C-A1091A430FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596A2423-C068-4DB7-A78C-A1091A430FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596A2423-C068-4DB7-A78C-A1091A430FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF90C349-2946-4301-A01B-F273B0E452F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF90C349-2946-4301-A01B-F273B0E452F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF90C349-2946-4301-A01B-F273B0E452F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF90C349-2946-4301-A01B-F273B0E452F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7D3D95-80B4-47B4-A8CA-669E6FAD74B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7D3D95-80B4-47B4-A8CA-669E6FAD74B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7D3D95-80B4-47B4-A8CA-669E6FAD74B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7D3D95-80B4-47B4-A8CA-669E6FAD74B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{052FDC5F-0653-490F-A4EB-D4B5B704880F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{052FDC5F-0653-490F-A4EB-D4B5B704880F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{052FDC5F-0653-490F-A4EB-D4B5B704880F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{052FDC5F-0653-490F-A4EB-D4B5B704880F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCD18148-6264-468C-AF26-3767A9CA5EEB}
+	EndGlobalSection
+EndGlobal

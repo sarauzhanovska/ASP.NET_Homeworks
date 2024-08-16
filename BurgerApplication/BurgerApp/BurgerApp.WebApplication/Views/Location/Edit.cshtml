@@ -1,0 +1,39 @@
+﻿@model Location
+
+<partial name="_Notification" />
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-body-emphasis">Edit Location</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="LocationName" class="form-label"></label>
+            <input asp-for="LocationName" class="form-control" />
+            <span asp-validation-for="LocationName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address" class="form-label"></label>
+            <input asp-for="Address" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <div class="form-group">
+                <label asp-for="OpensAt" class="form-label"></label>
+                <input asp-for="OpensAt" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ClosesAt" class="form-label"></label>
+                <input asp-for="ClosesAt" class="form-control" />
+            </div>
+        </div>
+   
+   
+        <div class="text-end mt-4">
+            <button type="submit" class="btn btn-primary" style="width:150px">Edit</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+
+           
+        </div>
+    </div>
+</form>

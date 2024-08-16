@@ -1,0 +1,48 @@
+﻿@using BurgerApp.Dtos.Dto
+@model Order
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-body-emphasis">Edit Order</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label"></label>
+            <input asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address" class="form-label"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Location" class="form-label"></label>
+            <input asp-for="Location" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="IsDelivered" class="form-label"></label>
+            <input asp-for="IsDelivered" type="checkbox" class="form-check-input" />
+            <span asp-validation-for="IsDelivered" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Burgers</label>
+                @foreach (var burger in ViewBag.Burger)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="@burger.Value" name="Name" id="burger_@burger.Value">
+                        <label class="form-check-label" for="burger_@burger.Value">
+                            @burger.Text
+                        </label>
+                    </div>
+                }
+
+        </div>
+
+        <div class="text-end">
+            <button type="submit" class="btn btn-primary" style="width:150px">Edit</button>
+            <a asp-controller="Order" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to menu</a>
+        </div>
+    </div>
+</form>

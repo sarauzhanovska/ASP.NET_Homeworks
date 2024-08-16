@@ -1,0 +1,40 @@
+﻿@model Burger
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-body-emphasis">Edit Burger</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price" class="form-label"></label>
+            <input asp-for="Price" type="number" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <div class="form-check form-check-inline">
+                <input asp-for="IsVegetarian" type="checkbox" class="form-check-input" id="isVegetarian" />
+                <label for="isVegetarian" class="form-check-label">Vegetarian</label>
+
+            </div>
+            <div class="form-check form-check-inline">
+                <input asp-for="IsVegan" type="checkbox" class="form-check-input" id="isVegan" />
+                <label for="isVegan" class="form-check-label">Vegan</label>
+
+            </div>
+            <div class="form-check form-check-inline">
+                <input asp-for="HasFries" type="checkbox" class="form-check-input" id="hasFries" />
+                <label for="hasFries" class="form-check-label">Includes Fries</label>
+            </div>
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+                <a asp-controller="Burger" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to menu</a>
+            </div>
+        </div>
+    </div>
+</form>

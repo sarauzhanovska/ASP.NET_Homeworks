@@ -1,0 +1,36 @@
+﻿
+@model Order
+
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-body-emphasis">Delete Order</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label"></label>
+            <input asp-for="FullName" disabled class="form-control" />
+            <span asp-validation-for="FullName"  class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address" class="form-label"></label>
+            <input asp-for="Address" disabled class="form-control" />
+            <span asp-validation-for="Address"  class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Location" class="form-label"></label>
+            <input asp-for="Location" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="IsDelivered" class="form-label"></label>
+            <input asp-for="IsDelivered" type="checkbox" disabled class="form-check-input" />
+            <span asp-validation-for="IsDelivered" class="text-danger"></span>
+        </div>
+
+        <div class="text-end">
+            <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+            <a asp-controller="Order" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to menu</a>
+        </div>
+    </div>
+</form>

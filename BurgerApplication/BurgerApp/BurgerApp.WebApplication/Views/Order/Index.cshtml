@@ -1,0 +1,70 @@
+﻿
+@model IEnumerable<Order>
+
+@{
+    ViewData["Title"] = "Order List";
+}
+
+<partial name="_Notification" />
+
+<h1>Order List</h1>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-12 text-end">
+            <a asp-controller="Order" asp-action="Create" class="btn btn-primary">
+                Create new order
+            </a>
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>Location</th>
+            <th>Is Delivered</th>
+            <th>Burgers</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+              
+                <td>@order.FullName</td>
+                <td>@order.Address</td>
+                <td>@order.Location</td>
+                <td>@(order.IsDelivered ? "Yes" : "No")</td>
+                <td>
+                    @if (order.Burgers != null && order.Burgers.Any())
+                    {
+                        @string.Join(", ", order.Burgers.Select(b => b.Name))
+                    }
+                    else
+                    {
+                        <p>No burgers</p>
+                    }
+         
+                </td>
+                
+
+                <td>
+                    <div class="d-flex justify-content-end w-75">
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-primary" asp-controller="Order" asp-action="Edit" asp-route-id="@order.Id">
+                                Edit
+                            </a>
+                            <a class="btn btn-danger" asp-controller="Order" asp-action="Delete" asp-route-id="@order.Id">
+                                <i class="bi bi-trash"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
